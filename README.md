@@ -19,7 +19,7 @@ The diagram above highlights the key distinctions between **PrefMMT** and other 
 ## Architecture Overview
 
 <div align="center">
-  <img src="/figures/Comparison.jpg" alt="PrefMMT Architecture" width="800"/>
+  <img src="/figures/PrefMMTAR.PNG" alt="PrefMMT Architecture" width="400"/>
 </div>
 
 ## Installation
