@@ -1,30 +1,46 @@
 # PrefMMT
-This repository contains the source code for our paper: "PrefMMT: Modeling Human Preferences in Preference-based Reinforcement Learning with Multimodal Transformers", submitted to 2025 IEEE International Conference on Robotics and Automation (ICRA 2025). For more details, please refer to [our project website](https://sites.google.com/view/prefmmt).
+
+This repository contains the source code for our paper: **"PrefMMT: Modeling Human Preferences in Preference-based Reinforcement Learning with Multimodal Transformers"**, submitted to the 2025 IEEE International Conference on Robotics and Automation (ICRA 2025). For more information, visit our [project website](https://sites.google.com/view/prefmmt).
 
 ## Abstract
-Preference-based reinforcement learning (PbRL) shows promise in aligning robot behaviors with human preferences, but its success depends heavily on the accurate modeling of human preferences through reward models. Most methods adopt Markovian assumptions for preference modeling (PM), which overlook the temporal dependencies within robot behavior trajectories that impact human evaluations. While recent works have utilized sequence modeling to mitigate this by learning sequential non-Markovian rewards, they ignore the multimodal nature of robot trajectories, which consist of elements from two distinctive modalities: state and action. As a result, they often struggle to capture the complex interplay between these modalities that significantly shapes human preferences. In this paper, we propose a multimodal sequence modeling approach for PM by disentangling state and action modalities. We introduce a multimodal transformer network, named PrefMMT, which hierarchically leverages intra-modal temporal dependencies and inter-modal state-action interactions to capture complex preference patterns. We demonstrate that PrefMMT consistently outperforms state-of-the-art PM baselines on locomotion tasks from the D4RL benchmark and manipulation tasks from the Meta-World benchmark.
 
-## Overview Architecture for PrefMMT
-<div align=center>
-<img src="/figures/Comparison.jpg" width="800" />
-</div> 
+Preference-based Reinforcement Learning (PbRL) is a promising approach for aligning robot behaviors with human preferences, but its effectiveness relies on accurately modeling those preferences through reward models. Traditional methods often assume preferences are Markovian, neglecting the temporal dependencies within robot behavior trajectories that influence human evaluations. While recent approaches use sequence modeling to learn non-Markovian rewards, they overlook the multimodal nature of robot trajectories, consisting of both state and action elements. This oversight limits their ability to capture the intricate interplay between these modalities, which is critical in shaping human preferences.
 
-## Usage
+In this work, we introduce **PrefMMT**, a multimodal transformer network designed to disentangle and model the state and action modalities separately. PrefMMT hierarchically leverages intra-modal temporal dependencies and inter-modal state-action interactions to capture complex preference patterns. Our experiments show that PrefMMT consistently outperforms state-of-the-art baselines on locomotion tasks from the D4RL benchmark and manipulation tasks from the Meta-World benchmark.
+
+## Comparison: PrefMMT vs. Other Preference Modeling Methods
+
+<div align="center">
+  <img src="/figures/Comparison.jpg" alt="Comparison of PrefMMT with other methods" width="800"/>
+</div>
+
+The diagram above highlights the key distinctions between **PrefMMT** and other existing preference modeling methods. While traditional approaches often make Markovian assumptions and fail to capture the multimodal interactions between state and action, **PrefMMT** addresses this gap by leveraging a multimodal transformer architecture. This allows for a more accurate and dynamic understanding of human preferences by modeling both intra-modal and inter-modal dependencies.
+
+## Architecture Overview
+
+<div align="center">
+  <img src="/figures/Comparison.jpg" alt="PrefMMT Architecture" width="800"/>
+</div>
+
+## Installation
+
 ### Requirements
-1. Install dependencies
 
-```
-pip install --upgrade pip
-conda install -y -c conda-forge cudatoolkit=11.1 cudnn=8.2.1
-pip install -r requirements.txt
-cd d4rl
-pip install -e .
-cd ..
-```
-2. Install Jax and Jaxlib
+1. Install dependencies:
 
-- jax 0.4.9
-- jaxlib 0.4.9(https://storage.googleapis.com/jax-releases/jax_cuda_releases.html)
+    ```bash
+    pip install --upgrade pip
+    conda install -y -c conda-forge cudatoolkit=11.1 cudnn=8.2.1
+    pip install -r requirements.txt
+    cd d4rl
+    pip install -e .
+    cd ..
+    ```
+
+2. Install JAX and JAXlib:
+
+    - `jax 0.4.9`
+    - `jaxlib 0.4.9` (Install from [JAX CUDA releases](https://storage.googleapis.com/jax-releases/jax_cuda_releases.html))
 
 
 ## Run the code
