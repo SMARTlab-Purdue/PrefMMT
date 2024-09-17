@@ -6,7 +6,7 @@ Preference-based reinforcement learning (PbRL) shows promise in aligning robot b
 
 ## Overview Architecture for Audformer
 <div align=center>
-<img src="/figures/Comparison" width="800" />
+<img src="/figures/Comparison.jpg" width="800" />
 </div> 
 
 ## Usage
