@@ -63,4 +63,4 @@ CUDA_VISIBLE_DEVICES=0 python train_offline.py --seq_len {sequence length in rew
 
 ## Acknowledgments
 
-Our code is based on the implementation of[PT](https://github.com/csmile-1006/PreferenceTransformer), [Flaxmodels](https://github.com/matthias-wright/flaxmodels) and [IQL](https://github.com/ikostrikov/implicit_q_learning). 
+Our code is based on the implementation of [PT](https://github.com/csmile-1006/PreferenceTransformer), [Flaxmodels](https://github.com/matthias-wright/flaxmodels) and [IQL](https://github.com/ikostrikov/implicit_q_learning). 
