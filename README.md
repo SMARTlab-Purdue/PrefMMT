@@ -55,7 +55,6 @@ CUDA_VISIBLE_DEVICES=0 python -m JaxPref.main --use_human_label True --comment {
 ### Run IQL with learned Reward Model
 
 ```python
-# Preference Transfomer (PT)
 CUDA_VISIBLE_DEVICES=0 python train_offline.py --seq_len {sequence length in reward prediction} --comment {experiment_name} --eval_interval {5000: mujoco / 100000: antmaze / 5000: metaworld} --env_name {d4rl env name} --config {configs/(mujoco|antmaze|metaworld)_config.py} --eval_episodes {100 for ant , 10 o.w.} --use_reward_model True --model_type PrefMMT --ckpt_dir {reward_model_path} --seed {seed}
 ```
 (The code was tested in Ubuntu 20.04 with Python 3.8.)
