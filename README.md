@@ -1,6 +1,6 @@
 # PrefMMT
 
-This repository contains the source code for our paper: **"PrefMMT: Modeling Human Preferences in Preference-based Reinforcement Learning with Multimodal Transformers"**, submitted to the 2025 IEEE International Conference on Robotics and Automation (ICRA 2025). For more information, visit our [project website](https://sites.google.com/view/prefmmt).
+This repository contains the source code for our paper: **"PrefMMT: Modeling Human Preferences in Preference-based Reinforcement Learning with Multimodal Transformers"**. For more information, visit our [project website](https://sites.google.com/view/prefmmt).
 
 ## Abstract
 
