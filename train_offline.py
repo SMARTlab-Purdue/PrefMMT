@@ -89,17 +89,14 @@ def make_env_and_dataset(env_name: str,
     if 'metaworld' in env_name:
         env = ppo_make_metaworld_env(env_name,seed)
         env = MetaWorldMonitor(env)
-        #env = wrappers.EpisodeMonitor(env)
         env.action_space.seed(seed)
         env.observation_space.seed(seed)
         env._max_episode_steps = 500
         dataset = offlinedataset(env = env,env_name = env_name)
     else:
         env = gym.make(env_name)
-
         env = wrappers.EpisodeMonitor(env)
         env._max_episode_steps = 1000
-
         env.seed(seed)
         env.action_space.seed(seed)
         env.observation_space.seed(seed)

@@ -1,6 +1,6 @@
 # PrefMMT
 
-This repository contains the source code for our paper: **"PrefMMT: Modeling Human Preferences in Preference-based Reinforcement Learning with Multimodal Transformers"**. For more information, visit our [project website](https://sites.google.com/view/prefmmt).
+This repository contains the source code for our paper: **"PrefMMT: Modeling Human Preferences in Preference-based Reinforcement Learning with Multimodal Transformers"**, submitted to the 2025 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS 2025). For more information, visit our [project website](https://sites.google.com/view/prefmmt).
 
 ## Abstract
 
@@ -57,7 +57,7 @@ CUDA_VISIBLE_DEVICES=0 python -m JaxPref.main --use_human_label True --comment {
 ```python
 CUDA_VISIBLE_DEVICES=0 python train_offline.py --seq_len {sequence length in reward prediction} --comment {experiment_name} --eval_interval {5000: mujoco / 100000: antmaze / 5000: metaworld} --env_name {d4rl env name} --config {configs/(mujoco|antmaze|metaworld)_config.py} --eval_episodes {100 for ant , 10 o.w.} --use_reward_model True --model_type PrefMMT --ckpt_dir {reward_model_path} --seed {seed}
 ```
-(The code was tested in Ubuntu 20.04 with Python 3.8.)
+(The code was tested in Ubuntu 20.04 with Python 3.9.)
 
 
 ## Acknowledgments

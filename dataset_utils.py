@@ -355,6 +355,7 @@ def reward_from_preference_transformer(
     new_r = np.zeros_like(dataset.rewards)
     pts = []
     attn_weights = []
+    
     for i in trange(interval, desc="relabel reward"):
         start_pt = i * batch_size
         end_pt = min((i + 1) * batch_size, data_size)

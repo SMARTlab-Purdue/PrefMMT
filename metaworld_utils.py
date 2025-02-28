@@ -12,8 +12,6 @@ def make_metaworld_env(env_id, seed):
         env_cls = _env_dict.ALL_V1_ENVIRONMENTS[env_name]
     
     env = env_cls()
-    
-    #env = metaworld.ML1(env_name,seed=seed)
 
     env._freeze_rand_vec = False
     env._set_task_called = True
@@ -45,7 +43,6 @@ def get_dataset(env_name,env):
         next_obs_.append(new_obs)
         done_.append(done_bool)
         if final_timestep:
-            # Skip this transition and don't apply terminals on the last step of an episode
             episode_step = 0
             continue
         if done_bool or final_timestep:
